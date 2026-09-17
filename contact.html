@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Student Project CS2 Contact -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Champions - Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">CS2 ESPORTS</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="matches.html">Schedule</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="center-text">Get in Touch</h1>
+        <p class="center-text">Have questions or sponsorship proposals? Send us a message below.</p>
+
+        <form id="contact-form" action="#" method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="theme">Inquiry Type:</label>
+                <select id="theme" name="theme">
+                    <option value="sponsorship">Sponsorship / Business</option>
+                    <option value="academy">Tryout / Academy</option>
+                    <option value="general">General Question</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn full-width">Send Message</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Created by: Zhalgasbayev Yesset Turlanuly | Front End Assignment #1</p>
+    </footer>
+
+</body>
+</html>

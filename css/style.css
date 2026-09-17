@@ -1,0 +1,308 @@
+/* ==========================================
+   1. ELEMENT SELECTORS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f1219;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #94a3b8;
+}
+
+footer {
+    background-color: #090b10;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid #1e293b;
+    color: #94a3b8;
+}
+
+/* ==========================================
+   2. DESCENDANT SELECTORS
+   ========================================== */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(15, 18, 25, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #1e293b;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.matches-table th, 
+.matches-table td {
+    padding: 1rem;
+    text-align: left;
+}
+
+/* ==========================================
+   3. CLASS SELECTORS
+   ========================================== */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(15, 18, 25, 0.7), rgba(15, 18, 25, 0.9)), 
+                url('../images/trophy.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #38bdf8;
+    color: #0f1219;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.team-section {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #38bdf8;
+    margin-bottom: 1rem;
+}
+
+.achievement-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.achievement-list li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.matches-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: #1e293b;
+    border-radius: 8px;
+    overflow: visible;
+}
+
+.matches-table th {
+    background-color: #334155;
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.matches-table tr:nth-child(even) {
+    background-color: #182232;
+}
+
+.status-live {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.status-upcoming {
+    color: #eab308;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Элементы таблиц и плашки команд */
+.team-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.team-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.team-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 24px;
+    padding: 0 6px;
+    background-color: #2b384e;
+    color: #00d4ff;
+    border: 1px solid #00d4ff;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.vs-text {
+    color: #94a3b8;
+    margin: 0 4px;
+}
+
+/* Всплывающий состав команд при клике */
+.roster-pop {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.roster-pop summary {
+    list-style: none;
+    font-weight: 600;
+}
+
+.roster-pop summary::-webkit-details-marker {
+    display: none;
+}
+
+.roster-pop summary:hover {
+    color: #38bdf8;
+    text-decoration: underline;
+}
+
+.roster-box {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1e293b;
+    border: 1px solid #38bdf8;
+    border-radius: 6px;
+    padding: 8px 12px;
+    z-index: 99;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    margin-top: 4px;
+}
+
+.roster-box span {
+    display: block;
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    line-height: 1.4;
+}
+
+/* ==========================================
+   4. ID & FORM SELECTORS
+   ========================================== */
+#contact-form {
+    background-color: #1e293b;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #cbd5e1;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #0f1219;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+}

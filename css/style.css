@@ -1,6 +1,4 @@
-/* ==========================================
-   1. ELEMENT SELECTORS
-   ========================================== */
+/* 1. ELEMENT SELECTORS*/
 * {
     margin: 0;
     padding: 0;
@@ -33,9 +31,7 @@ footer {
     color: #94a3b8;
 }
 
-/* ==========================================
-   2. DESCENDANT SELECTORS
-   ========================================== */
+/*2. NAVIGATION */
 header nav {
     display: flex;
     justify-content: space-between;
@@ -60,35 +56,24 @@ header nav {
     color: #38bdf8;
 }
 
-.matches-table th, 
-.matches-table td {
-    padding: 1rem;
-    text-align: left;
-}
-
-/* ==========================================
-   3. CLASS SELECTORS
-   ========================================== */
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #38bdf8;
 }
 
+/*3. HERO BANNER (ПРОСТОЙ БЛОК)*/
 .hero {
-    position: relative;
-    height: 100vh;
+    height: 80vh;
     background: linear-gradient(rgba(15, 18, 25, 0.7), rgba(15, 18, 25, 0.9)), 
                 url('../images/trophy.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
+    padding-top: 150px; /* Простой отступ сверху, чтобы текст встал красиво */
+    text-align: center; /* По умолчанию всё по центру */
 }
 
 .hero-content {
-    max-width: 800px;
+    width: 90%;
+    margin: 0 auto; /* Центрирует сам блок */
 }
 
 .hero-title {
@@ -117,7 +102,6 @@ header nav {
     border-radius: 6px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -125,6 +109,7 @@ header nav {
     color: #ffffff;
 }
 
+/*4. CONTENT & TABLES*/
 .container {
     max-width: 1100px;
     margin: 3rem auto;
@@ -161,7 +146,12 @@ header nav {
     margin-top: 1.5rem;
     background-color: #1e293b;
     border-radius: 8px;
-    overflow: visible;
+}
+
+.matches-table th, 
+.matches-table td {
+    padding: 1rem;
+    text-align: left;
 }
 
 .matches-table th {
@@ -191,7 +181,6 @@ header nav {
     width: 100%;
 }
 
-/* Элементы таблиц и плашки команд */
 .team-wrapper {
     display: flex;
     align-items: center;
@@ -202,23 +191,6 @@ header nav {
     width: 24px;
     height: 24px;
     object-fit: contain;
-    vertical-align: middle;
-}
-
-.team-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 32px;
-    height: 24px;
-    padding: 0 6px;
-    background-color: #2b384e;
-    color: #00d4ff;
-    border: 1px solid #00d4ff;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 
 .vs-text {
@@ -226,25 +198,10 @@ header nav {
     margin: 0 4px;
 }
 
-/* Всплывающий состав команд при клике */
 .roster-pop {
     position: relative;
     display: inline-block;
     cursor: pointer;
-}
-
-.roster-pop summary {
-    list-style: none;
-    font-weight: 600;
-}
-
-.roster-pop summary::-webkit-details-marker {
-    display: none;
-}
-
-.roster-pop summary:hover {
-    color: #38bdf8;
-    text-decoration: underline;
 }
 
 .roster-box {
@@ -256,7 +213,6 @@ header nav {
     border-radius: 6px;
     padding: 8px 12px;
     z-index: 99;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     white-space: nowrap;
     margin-top: 4px;
 }
@@ -265,12 +221,9 @@ header nav {
     display: block;
     font-size: 0.85rem;
     color: #e2e8f0;
-    line-height: 1.4;
 }
 
-/* ==========================================
-   4. ID & FORM SELECTORS
-   ========================================== */
+/*5. FORMS*/
 #contact-form {
     background-color: #1e293b;
     padding: 2rem;
@@ -298,11 +251,4 @@ header nav {
     border: 1px solid #334155;
     border-radius: 4px;
     color: #ffffff;
-}
-
-.form-group input:focus, 
-.form-group select:focus, 
-.form-group textarea:focus {
-    outline: none;
-    border-color: #38bdf8;
 }
